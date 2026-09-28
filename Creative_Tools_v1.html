@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creative Tools · PAQUE</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#141a1f; --panel:#1c242b; --panel2:#232d35; --line:#2f3b45;
+  --ink:#eef2f4; --ink2:#9fb0bc; --ink3:#66788a;
+  --green:#4fd18b; --amber:#f2a93b; --red:#ef5b5b; --blue:#5aa7ff; --violet:#9b8cff;
+  --radius:10px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Barlow',system-ui,sans-serif;font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Barlow Condensed','Arial Narrow',sans-serif;letter-spacing:.01em;margin:0}
+.wrap{max-width:720px;margin:0 auto;padding:52px 16px 60px}
+
+/* hero */
+.hero{margin-bottom:26px}
+.eyebrow{font-family:'Barlow Condensed';font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:14px;color:var(--ink3);margin-bottom:8px}
+.hero h1{font-size:52px;font-weight:800;line-height:.98}
+.hero p{color:var(--ink2);font-size:17px;margin:12px 0 0;max-width:56ch}
+
+/* tools */
+.tools{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+.tool{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px;text-decoration:none;color:inherit;position:relative;overflow:hidden;transition:border-color .18s,background .18s}
+.tool:hover,.tool:focus-visible{border-color:var(--ink3);background:var(--panel2);outline:none}
+.tool:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.tool .accent{display:flex;gap:5px;margin-bottom:14px}
+.tool .accent i{width:9px;height:9px;border-radius:50%;display:block}
+.tool h2{font-size:26px;font-weight:800;text-transform:uppercase;line-height:1}
+.tool p{color:var(--ink2);font-size:14.5px;margin:8px 0 18px;flex:1 1 auto}
+.tool .go{font-family:'Barlow Condensed';font-weight:800;text-transform:uppercase;font-size:16px;color:var(--ink);letter-spacing:.02em}
+.tool:hover .go,.tool:focus-visible .go{color:var(--blue)}
+
+/* footer */
+footer{margin-top:34px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px}
+.madeby{font-family:'Barlow Condensed';font-weight:800;text-transform:uppercase;letter-spacing:.02em;font-size:16px;color:var(--ink2);text-decoration:none}
+.madeby:hover{color:var(--ink)}
+.copy{color:var(--ink3);font-size:12.5px;max-width:44ch;text-align:right}
+
+@media (max-width:560px){
+  .wrap{padding:40px 16px 52px}
+  .hero h1{font-size:40px}
+  .tools{grid-template-columns:1fr}
+  .copy{text-align:left}
+  footer{justify-content:flex-start}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <div class="hero">
+    <div class="eyebrow">PAQUE</div>
+    <h1>Creative Tools</h1>
+    <p>A small set of free tools for planning and sharpening your music — built by PAQUE for his own releases, open for any artist to use. Pick one to get started.</p>
+  </div>
+
+  <div class="tools">
+    <a class="tool" href="https://paqueofficial.github.io/Track-Reviewer/">
+      <div class="accent"><i style="background:var(--green)"></i><i style="background:var(--amber)"></i><i style="background:var(--red)"></i></div>
+      <h2>Track Reviewer</h2>
+      <p>Work each track down a vibe / lyrics / beat decision tree and see clearly which ones make the cut for your next project.</p>
+      <span class="go">Open →</span>
+    </a>
+
+    <a class="tool" href="https://paqueofficial.github.io/Release-Content-Tracker/">
+      <div class="accent"><i style="background:var(--ink3)"></i><i style="background:var(--blue)"></i><i style="background:var(--amber)"></i><i style="background:var(--violet)"></i><i style="background:var(--green)"></i></div>
+      <h2>Release Content Tracker</h2>
+      <p>Brainstorm and track the social content around a release, grouped by track — from first idea to shot, edited and posted.</p>
+      <span class="go">Open →</span>
+    </a>
+  </div>
+
+  <footer>
+    <a class="madeby" href="https://www.paqueofficial.com/" target="_blank" rel="noopener">Made by PAQUE →</a>
+    <div class="copy">These tools are the copyright of PAQUE. Free to use for your own projects; the code may not be copied, reproduced or repackaged.</div>
+  </footer>
+
+</main>
+</body>
+</html>
